@@ -7,12 +7,12 @@ def join_nested_strings(src)
     element_index = 0
     str_holder = ""
     while element_index < src[row_index].count
-      if src[row_index][element_index] < weather_temp
-        weather_temp = src[row_index][element_index]
+      if src[row_index][element_index] == ""
+        str_holder = src[row_index][element_index]
+        nested_strs_array << str_holder
       end
     element_index += 1
     end
-  nested_strs_array << str_holder
     row_index += 1
   end
   nested_strs_array.join(' ')
