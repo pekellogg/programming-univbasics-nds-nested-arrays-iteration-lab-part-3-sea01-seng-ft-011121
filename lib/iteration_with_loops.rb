@@ -7,7 +7,7 @@ def join_nested_strings(src)
     element_index = 0
     str_holder = ""
     while element_index < src[row_index].count
-      if src[row_index][element_index] == ""
+      if src[row_index][element_index].is_a? String
         str_holder = src[row_index][element_index]
         nested_strs_array << str_holder
       end
